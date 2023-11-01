@@ -1,6 +1,7 @@
-# Start/Iniciar a máquina virtual bastion
+# 1 - Start/Iniciar a máquina virtual bastion
 
-# Definir as variáveis
+
+# 2 - Definir as variáveis
 
 ````
 export SSH_IAP_NETWORK_TAG=
@@ -19,7 +20,7 @@ export ZONE=
 ````
 
 
-# Executar os comandos,  1 de cada vez. Lembrar de esperar terminar para executar o próximo
+# 3 - Executar os comandos,  1 de cada vez. Lembrar de esperar terminar para executar o próximo
 
 
 ````
@@ -46,7 +47,7 @@ gcloud compute firewall-rules create internal-ssh-ingress --allow=tcp:22 --sourc
 gcloud compute instances add-tags juice-shop --tags=$SSH_INTERNAL_NETWORK_TAG --zone=$ZONE
  ````
   
-# Acessar a bastion via SSH e executar o comando a seguir dentro dela
+# 4 - Acessar a bastion via SSH e executar o comando a seguir dentro dela
 
 ````
 gcloud compute ssh juice-shop --internal-ip
