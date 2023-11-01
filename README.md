@@ -1,6 +1,5 @@
 #Start/Iniciar a máquina virtual bastion
 
-###########################################################################################
 
 # Definir as variáveis
 
@@ -13,7 +12,6 @@ export SSH_INTERNAL_NETWORK_TAG=permit-ssh-internal-ingress-ql-161
 ````
 
 ````
-
 export HTTP_NETWORK_TAG=permit-http-ingress-ql-832
 
 ````
@@ -22,7 +20,6 @@ export HTTP_NETWORK_TAG=permit-http-ingress-ql-832
 export ZONE=us-west1-c
 ````
 
-###########################################################################################
 #Executar os comandos,  1 de cada vez. Lembrar de esperar terminar para executar o próximo
 
 ````
@@ -48,9 +45,6 @@ gcloud compute firewall-rules create internal-ssh-ingress --allow=tcp:22 --sourc
 ```` 
 gcloud compute instances add-tags juice-shop --tags=$SSH_INTERNAL_NETWORK_TAG --zone=$ZONE
  ````
-
-
-############################################################################################
   
 # Acessar a bastion via SSH e executar o comando a seguir dentro dela
 
