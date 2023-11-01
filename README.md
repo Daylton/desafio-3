@@ -1,5 +1,4 @@
-#Start/Iniciar a máquina virtual bastion
-
+# Start/Iniciar a máquina virtual bastion
 
 # Definir as variáveis
 
@@ -8,19 +7,20 @@ export SSH_IAP_NETWORK_TAG=
 ````
 
 ````
-export SSH_INTERNAL_NETWORK_TAG=permit-ssh-internal-ingress-ql-161
+export SSH_INTERNAL_NETWORK_TAG=
 ````
 
 ````
-export HTTP_NETWORK_TAG=permit-http-ingress-ql-832
-
+export HTTP_NETWORK_TAG=
 ````
 
 ````
-export ZONE=us-west1-c
+export ZONE=
 ````
 
-#Executar os comandos,  1 de cada vez. Lembrar de esperar terminar para executar o próximo
+
+# Executar os comandos,  1 de cada vez. Lembrar de esperar terminar para executar o próximo
+
 
 ````
 gcloud compute firewall-rules delete open-access
